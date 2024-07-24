@@ -16,7 +16,7 @@ For each image of both datasets (e.g. `street_obstacle_sequences/raw_data/sequen
 To compute the evaluation metrics run
 
 ```python
-python main.py --dataset sos
+python main.py --dataset_path /datasets --dataset sos
 ```
 for the SOS dataset (`--dataset wos` for WOS).
 

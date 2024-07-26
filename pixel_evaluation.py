@@ -84,7 +84,7 @@ def aggregate_pixel_metrics(frame_results: list):
 def pixel_wise_evaluation(dataset, num_cpus=16):
     print("evaluate OOD scores")
     results = dataset.images 
-    results = [f'{file.replace("_raw_data.jpg",".npy").replace("_raw_data.png",".npy")}'for file in dataset.images]
+    results = [f'{file.replace("_raw_data.jpg",".npy").replace("_raw_data.png",".npy").replace("raw_data", "ood_score")}'for file in dataset.images]
     
     target_paths = dataset.targets_semantic_ood
     targets = list(filter(lambda ele:ele is not None, target_paths))
